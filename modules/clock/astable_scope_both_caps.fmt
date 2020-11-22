@@ -1,0 +1,4 @@
+dtype:f32
+freq:1MHz
+nsamples:10m
+fields:cap,Q

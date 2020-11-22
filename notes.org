@@ -1,0 +1,9 @@
+* Oscilloscope & Data
+- To save space, data from the oscilloscope should be converted to binary. 
+- It is best if each log =<name>.bin= is accompanied by a small text file specifying its format =<name>.fmt=, and the length (in seconds) of the log, to enable correct plotting of the data. 
+- We will here declare some default values in case this file is not created:
+| Field       | Abbreviated | Value  |
+|-------------+-------------+--------|
+| Format      | fmt         | f      |
+| Frequency   | freq        | 100kHz |
+| Num samples | nsamples    | 1M     |
