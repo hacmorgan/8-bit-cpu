@@ -77,7 +77,11 @@ Of particular note in Figure \ref{fig:astable_scope} is the overshoot on the out
 
 \vspace{0.3cm}
 
-Finally, note that the 100K$\Omega$ resistor in Figure \ref{fig:astable_circuit_diagram} has been replaced by a variable resistor (0 to 1M$\Omega$) in Figure \ref{fig:astable_circuit}, so that the clock speed can be varied. 
+Finally, note the variable resistor (in series with a 1k$\omega$ resistor) in Figure \ref{fig:astable_circuit_diagram}, which allows the speed of the clock to be varied by controlling the flow of current into and out of the capacitor. \\
+
+\vspace{0.3cm}
+
+Table \ref{tab:astable_cycle} shows the operation cycle of the circuit. \\
 
 
 \begin{figure}[h]
@@ -90,33 +94,81 @@ Finally, note that the 100K$\Omega$ resistor in Figure \ref{fig:astable_circuit_
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=\linewidth]{../modules/clock/astable_scope.png}
+    \includegraphics[width=\linewidth]{../modules/clock/astable_scope_no_caps.png}
     \caption{Astable 555 Timer Oscilloscope Data}
     \label{fig:astable_scope}
   \end{center}
 \end{figure}
 
-Some text
-
-\begin{center}
-  \begin{tabular}{ c | c c c c c c }
-    Time & Capacitor Voltage & S & R & Q & $\overline Q$ & Transistor \\
-    \hline
-    $t_0$ & 0       & 1 & 0 & 1 & 0 & Off \\
-    $t_1$ & $>1.67$ & 0 & 0 & 1 & 0 & Off \\
-    $t_2$ & $>3.33$ & 0 & 1 & 0 & 1 & On  \\
-    $t_3$ & $<3.33$ & 0 & 0 & 0 & 1 & On  \\
-    $t_4$ & $<1.67$ & 1 & 0 & 1 & 0 & Off \\
-  \end{tabular}
-\end{center}
-
-    
+\begin{table}[h]
+  \begin{center}
+    \begin{tabular}{ c | c c c c c c c }
+      Time & Circuit Status & Capacitor Voltage & S & R & Q & $\overline Q$ & Transistor \\
+      \hline
+      $t_0$ & Power on    & 0       & 1 & 0 & 1 & 0 & Off \\
+      $t_1$ & Charging    & $>1.67$ & 0 & 0 & 1 & 0 & Off \\
+      $t_2$ & Discharging & $>3.33$ & 0 & 1 & 0 & 1 & On  \\
+      $t_3$ & Discharging & $<3.33$ & 0 & 0 & 0 & 1 & On  \\
+      $t_4$ & Charging    & $<1.67$ & 1 & 0 & 1 & 0 & Off \\
+    \end{tabular}
+    \caption{Astable 555 Timer Operation Cycle}
+    \label{tab:astable_cycle}
+  \end{center}
+\end{table}
 
 \clearpage
 
 
 \subsection{Monostable 555 Timer}
-To allow us to manually advance the clock by one clock cycle, we will use a 555 timer to debounce a pushbutton. Appro
+To allow us to manually advance the clock by one clock cycle, we will use a 555 timer to debounce a pushbutton. This mode of operation is referred to as monostable operation, as the circuit settles to a stable state after the capacitor is discharged.
+
+\vspace{0.3cm}
+
+The monostable circuit diagram is shown in Figure \ref{fig:monostable_circuit_diagram}, and the physical circuit is shown in Figure \ref{fig:monostable_circuit}. The operation cycle is shown in Table \ref{tab:monostable_cycle}, and a plot of data from the oscilloscope is shown in Figure \ref{fig:monostable_scope}.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.8\linewidth]{../modules/clock/monostable_circuit_diagram.png}
+    \caption{Monostable 555 Timer Circuit}
+    \label{fig:monostable_circuit_diagram}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.7\linewidth]{../modules/clock/monostable_circuit.png}
+    \caption{Monostable 555 Timer Circuit}
+    \label{fig:monostable_circuit}
+  \end{center}
+\end{figure}
+
+\begin{table}[ht]
+  \begin{center}
+    \begin{tabular}{ c | c c c c c c c }
+      Time & Circuit Status & Capacitor Voltage & S & R & Q & $\overline Q$ & Transistor \\
+      \hline
+      $t_0$ & Power on        & 0       & 0 & 0 & x & x & x    \\
+      $t_1$ & Stable          & 0       & 0 & 0 & 0 & 1 & On   \\
+      $t_2$ & Button Pressed  & 0       & 1 & 0 & 1 & 0 & Off  \\
+      $t_3$ & Button Released & $<3.33$ & 0 & 0 & 1 & 0 & Off  \\
+      $t_4$ & Discharge       & $>3.33$ & 0 & 1 & 0 & 1 & On   \\
+    \end{tabular}
+    \caption{Monostable 555 Timer Operation Cycle}
+    \label{tab:monostable_cycle}
+  \end{center}
+\end{table}
+
+\begin{figure}[hb]
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{../modules/clock/monostable_scope.png}
+    \caption{Monostable 555 Timer Circuit}
+    \label{fig:monostable_scope}
+  \end{center}
+\end{figure}
+
+
+\subsection{Bistable 555 Timer}
+
 
 
 \end{FlushLeft}

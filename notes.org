@@ -1,3 +1,7 @@
+* TODOs
+** DONE Amend astable circuit diagram to include new features
+** TODO Put the table in a figure
+** TODO Add a description column to the table
 * Oscilloscope & Data
 - To save space, data from the oscilloscope should be converted to binary. 
 - It is best if each log =<name>.bin= is accompanied by a small text file specifying its format =<name>.fmt=, and the length (in seconds) of the log, to enable correct plotting of the data. 

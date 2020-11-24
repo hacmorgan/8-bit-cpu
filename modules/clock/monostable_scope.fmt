@@ -1,0 +1,4 @@
+format:2f
+freq:100kHz
+nsamples:200k
+fields:cap,Q
