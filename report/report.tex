@@ -168,7 +168,29 @@ The monostable circuit diagram is shown in Figure \ref{fig:monostable_circuit_di
 
 
 \subsection{Bistable 555 Timer}
+We need to be able to switch between our two clocks, which we can use a switch and some logic for. The switch, however, must be guaranteed to not bounce, or otherwise we could end up multiple clock cycles ahead of where we want to be. \\
 
+\vspace{0.3cm}
+
+To achieve this, we will just utilise the SR latch inside the 555 timer, and a \textit{break-before-make} double throw switch, with the centre pole connected to ground, and the two contacts connected to the 555's \textit{trigger} and \textit{reset} lines respectively. \\
+
+\vspace{0.3cm}
+
+If we also tie the threshold line to ground (such that it is never $>3.33V$), the \textit{trigger} line being pulled low will set the latch, while the \textit{reset} line being puled low will reset the latch. Because the switch is a \textit{break-before-make} switch, any bouncing will bounce between floating and that side of the switch, but once the first contact has been made, the output of the latch will be static until the switch first touches the other contact. Thus we have an effective circuit for the switch, where one of the contacts sends the output high, while the other sends it low, with no bouncing. \\
+
+
+\subsection{Clock logic}
+We will use some combinational logic to combine our clock-select switch with the two clock signals. To achieve this, we will \textit{AND} the astable clock with the clock-select signal, and the monostable clock with the inverted clock-select signal; \textit{OR}ing the results together to produce the clock signal. Finally, we \textit{AND} this with a halt signal (inverted) such that bringing the halt line high will stop the computer. \\
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{../modules/clock/monostable_scope.png}
+    \caption{Clock Logic Diagram}
+    \label{fig:clock_logic_diagram}
+  \end{center}
+\end{figure}
+
+Figure \ref{fig:clock_logic_diagram} shows the logic used in the clock module, and Figure \ref{fig:clock_logic} shows the implementation on the breadboard. This circuit (like any circuit) could be made entirely from NAND gates, saving a chip compared to the real implementation, shown in Figure \ref{fig:clock_logic_nand}. For this project, saving one IC is not really of concern, and the complete NAND implementation is harder to follow, so the simple (conceptually) implementation was chosen.
 
 
 \end{FlushLeft}
