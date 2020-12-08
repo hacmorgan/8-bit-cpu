@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.7)  23 NOV 2020 22:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.10.7)  29 NOV 2020 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -112,6 +112,11 @@ Package babel Info: \l@australian = using hyphenrules for ukenglish
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 (babel)             (\language21) on input line 108.
 ))
+(/usr/share/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language87
+LaTeX Info: Redefining \_ on input line 43.
+)
 (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -194,21 +199,28 @@ LaTeX Info: Redefining \] on input line 2860.
 File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count193
 \l__pdf_internal_box=\box47
-) (./report.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+) (./report.aux
+
+LaTeX Warning: Label `fig:clock_logic_diagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:clock_logic_diagram' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -244,9 +256,9 @@ LaTeX Font Info:    ... okay on input line 13.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package ragged2e Info: ABD: executing \RaggedRight on input line 13.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 14.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 13.
+LaTeX Info: Redefining \selectfont on input line 14.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -301,29 +313,56 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
-Overfull \hbox (2.64824pt too wide) in paragraph at lines 34--35
-\OT1/cmr/m/n/12 but-ton. This sec-tion will cover all it-er-a-tions of the time
-r: \OT1/cmr/m/it/12 astable\OT1/cmr/m/n/12 , \OT1/cmr/m/it/12 bistable\OT1/cmr/
-m/n/12 , and \OT1/cmr/m/it/12 monos- 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (11.69041pt too wide) in paragraph at lines 30--31
+\OT1/cmr/m/n/12 de-tail to fully re-fresh the con-cepts that gov-ern the op-er-
+a-tion of the CPU, while avoid-ing 
+ []
+
+[1]
+Overfull \hbox (30.98604pt too wide) in paragraph at lines 35--36
+\OT1/cmr/m/n/12 The clock mod-ule per-mits vari-able speeds, as well as sin-gle
+ clock pulses us-ing a push-but-ton. 
  []
 
 <../modules/clock/astable_circuit_diagram.png, id=11, 255.8358pt x 208.1376pt>
 File: ../modules/clock/astable_circuit_diagram.png Graphic file (type png)
 <use ../modules/clock/astable_circuit_diagram.png>
 Package pdftex.def Info: ../modules/clock/astable_circuit_diagram.png  used on 
-input line 42.
+input line 43.
 (pdftex.def)             Requested size: 354.86412pt x 288.72604pt.
 [2
 
  <../modules/clock/astable_circuit_diagram.png>]
+Overfull \hbox (5.78908pt too wide) in paragraph at lines 73--73
+\OT1/cmr/m/n/12 to the cir-cuit, the os-cil-lo-scope probes were hooked to the 
+pos-i-tive lead of the ca-pac-i-tor, 
+ []
+
+
+Overfull \hbox (4.60577pt too wide) in paragraph at lines 73--73
+\OT1/cmr/m/n/12 as well as the out-put of the SR latch. This data is shown in F
+ig-ure 3[]. Note: the val-ues 
+ []
+
+
+Overfull \hbox (8.596pt too wide) in paragraph at lines 73--73
+\OT1/cmr/m/n/12 on both scales of the os-cil-lo-scope data are not ac-cu-rate, 
+it's the shape that's im-por-tant.  
+ []
+
+
+Overfull \hbox (22.74586pt too wide) in paragraph at lines 77--77
+\OT1/cmr/m/n/12 reme-died by plac-ing a 0.1$\OML/cmm/m/it/12 ^^V$\OT1/cmr/m/n/1
+2 F ca-pac-i-tor across the power lines of the bread-board. Sim-i-larly, 
+ []
+
 <../modules/clock/astable_circuit.png, id=18, 1196.47pt x 2011.515pt>
 File: ../modules/clock/astable_circuit.png Graphic file (type png)
 <use ../modules/clock/astable_circuit.png>
 Package pdftex.def Info: ../modules/clock/astable_circuit.png  used on input li
-ne 89.
+ne 90.
 (pdftex.def)             Requested size: 221.78923pt x 372.86108pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -331,7 +370,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../modules/clock/astable_scope_no_caps.png Graphic file (type png)
 <use ../modules/clock/astable_scope_no_caps.png>
 Package pdftex.def Info: ../modules/clock/astable_scope_no_caps.png  used on in
-put line 97.
+put line 98.
 (pdftex.def)             Requested size: 443.57848pt x 336.85262pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -341,7 +380,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3] [4 <../modules/clock/astable_circuit.png>] [5 <../modules/clock/astable_sco
 pe_no_caps.png (PNG copy)>]
-Overfull \hbox (4.44882pt too wide) in paragraph at lines 127--128
+Overfull \hbox (21.84724pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/12 to de-bounce a push-but-ton. This mode of op-er-a-tion is re-fe
+rred to as monos-table op-er-a-tion, 
+ []
+
+
+Overfull \hbox (4.44882pt too wide) in paragraph at lines 128--129
 []\OT1/cmr/m/n/12 The monos-table cir-cuit di-a-gram is shown in Fig-ure 4[], a
 nd the phys-i-cal cir-cuit is shown 
  []
@@ -351,13 +396,13 @@ t>
 File: ../modules/clock/monostable_circuit_diagram.png Graphic file (type png)
 <use ../modules/clock/monostable_circuit_diagram.png>
 Package pdftex.def Info: ../modules/clock/monostable_circuit_diagram.png  used 
-on input line 131.
+on input line 132.
 (pdftex.def)             Requested size: 354.86412pt x 295.8461pt.
 <../modules/clock/monostable_circuit.png, id=34, 1910.13625pt x 3184.89874pt>
 File: ../modules/clock/monostable_circuit.png Graphic file (type png)
 <use ../modules/clock/monostable_circuit.png>
 Package pdftex.def Info: ../modules/clock/monostable_circuit.png  used on input
- line 139.
+ line 140.
 (pdftex.def)             Requested size: 310.50357pt x 517.71pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -366,31 +411,151 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ../modules/clock/monostable_scope.png Graphic file (type png)
 <use ../modules/clock/monostable_scope.png>
 Package pdftex.def Info: ../modules/clock/monostable_scope.png  used on input l
-ine 163.
+ine 164.
 (pdftex.def)             Requested size: 399.21791pt x 299.4242pt.
 [6
 
  <../modules/clock/monostable_circuit_diagram.png>] [7] [8 <../modules/clock/mo
-nostable_circuit.png>] [9 <../modules/clock/monostable_scope.png (PNG copy)>] (
-./report.aux) ) 
+nostable_circuit.png>] [9 <../modules/clock/monostable_scope.png (PNG copy)>]
+Overfull \hbox (39.13358pt too wide) in paragraph at lines 178--178
+[]\OT1/cmr/m/n/12 To achieve this, we will just utilise the SR latch in-side th
+e 555 timer, and a \OT1/cmr/m/it/12 break-before-make 
+ []
+
+<../modules/clock/bistable_circuit_diagram.png, id=50, 745.78625pt x 803.0pt>
+File: ../modules/clock/bistable_circuit_diagram.png Graphic file (type png)
+<use ../modules/clock/bistable_circuit_diagram.png>
+Package pdftex.def Info: ../modules/clock/bistable_circuit_diagram.png  used on
+ input line 182.
+(pdftex.def)             Requested size: 354.86412pt x 382.07837pt.
+
+Overfull \hbox (2.85161pt too wide) in paragraph at lines 188--188
+\OT1/cmr/m/n/12 be-tween float-ing and that side of the switch, but once the fi
+rst con-tact has been made, 
+ []
+
+[10
+
+ <../modules/clock/bistable_circuit_diagram.png>]
+<../modules/clock/bistable_circuit.png, id=55, 955.57pt x 1539.7525pt>
+File: ../modules/clock/bistable_circuit.png Graphic file (type png)
+<use ../modules/clock/bistable_circuit.png>
+Package pdftex.def Info: ../modules/clock/bistable_circuit.png  used on input l
+ine 192.
+(pdftex.def)             Requested size: 266.14978pt x 428.84877pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11] [12 <../modules/clock/bistable_circuit.png>]
+<../modules/clock/clock_logic_diagram.png, id=64, 1638.12pt x 1006.76125pt>
+File: ../modules/clock/clock_logic_diagram.png Graphic file (type png)
+<use ../modules/clock/clock_logic_diagram.png>
+Package pdftex.def Info: ../modules/clock/clock_logic_diagram.png  used on inpu
+t line 206.
+(pdftex.def)             Requested size: 399.21791pt x 245.34521pt.
+
+
+LaTeX Warning: Reference `fig:clock_logic' on page 13 undefined on input line 2
+12.
+
+
+LaTeX Warning: Reference `fig:clock_logic_nand' on page 13 undefined on input l
+ine 212.
+
+
+Overfull \hbox (36.22502pt too wide) in paragraph at lines 212--213
+[]\OT1/cmr/m/n/12 Figure 11[] shows the logic used in the clock mod-ule, and Fi
+g-ure [] shows the im-ple-men-ta-tion 
+ []
+
+
+Overfull \hbox (33.61102pt too wide) in paragraph at lines 212--213
+\OT1/cmr/m/n/12 this project, sav-ing one IC is not re-ally of con-cern, and th
+e com-plete NAND im-ple-men-ta-tion 
+ []
+
+<../modules/clock/clock_logic_diagram_nand.png, id=65, 1669.23625pt x 681.54625
+pt>
+File: ../modules/clock/clock_logic_diagram_nand.png Graphic file (type png)
+<use ../modules/clock/clock_logic_diagram_nand.png>
+Package pdftex.def Info: ../modules/clock/clock_logic_diagram_nand.png  used on
+ input line 216.
+(pdftex.def)             Requested size: 399.21791pt x 162.99207pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../modules/clock/clock_logic.png, id=66, 1955.305pt x 1589.94pt>
+File: ../modules/clock/clock_logic.png Graphic file (type png)
+<use ../modules/clock/clock_logic.png>
+Package pdftex.def Info: ../modules/clock/clock_logic.png  used on input line 2
+24.
+(pdftex.def)             Requested size: 399.21791pt x 324.60548pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13
+
+ <../modules/clock/clock_logic_diagram.png>] [14 <../modules/clock/clock_logic_
+diagram_nand.png> <../modules/clock/clock_logic.png>]
+Overfull \hbox (17.22128pt too wide) in paragraph at lines 236--236
+\OT1/cmr/m/n/12 Our com-puter will have three 8-bit reg-is-ters. The \OT1/cmr/m
+/it/12 A \OT1/cmr/m/n/12 and \OT1/cmr/m/it/12 B \OT1/cmr/m/n/12 reg-is-ters, fo
+r stor-ing ar-bi-trary 
+ []
+
+<../modules/register/register_architecture.png, id=75, 1175.39125pt x 927.465pt
+>
+File: ../modules/register/register_architecture.png Graphic file (type png)
+<use ../modules/register/register_architecture.png>
+Package pdftex.def Info: ../modules/register/register_architecture.png  used on
+ input line 240.
+(pdftex.def)             Requested size: 399.21791pt x 315.00844pt.
+[15
+
+ <../modules/register/register_architecture.png>]
+Overfull \hbox (11.92513pt too wide) in paragraph at lines 250--250
+\OT1/cmr/m/n/12 reg-is-ter, us-ing the ex-act ar-chi-tec-ture shown above. The 
+cir-cuit for each will be iden-ti-cal, 
+ []
+
+<../modules/register/register_circuit_diagram.png, id=80, 320.8788pt x 460.3599
+pt>
+File: ../modules/register/register_circuit_diagram.png Graphic file (type png)
+<use ../modules/register/register_circuit_diagram.png>
+Package pdftex.def Info: ../modules/register/register_circuit_diagram.png  used
+ on input line 254.
+(pdftex.def)             Requested size: 399.21791pt x 572.75104pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16
+
+] [17 <../modules/register/register_circuit_diagram.png>] (./report.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3669 strings out of 480478
- 53411 string characters out of 5905959
- 319537 words of memory out of 5000000
- 19637 multiletter control sequences out of 15000+600000
- 537306 words of font info for 41 fonts, out of 8000000 for 9000
+ 3755 strings out of 480478
+ 55861 string characters out of 5905959
+ 319397 words of memory out of 5000000
+ 19711 multiletter control sequences out of 15000+600000
+ 537613 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,9n,29p,677b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
-2.pfb>
-Output written on report.pdf (10 pages, 12444347 bytes).
+ 34i,9n,29p,677b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on report.pdf (18 pages, 22421961 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

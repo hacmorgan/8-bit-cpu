@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+
+import sys
+
+
+def wirelen( num_pins ):
+    print( "{}mm".format(float(num_pins)*2.54+14) )
+
+
+def main():
+    while True:
+        try:
+            wirelen( eval(input("Number of pins: ")) )
+        except NameError:
+            print( "invalid input", file=sys.stderr )
+
+
+if __name__ == '__main__':
+    sys.exit(main())

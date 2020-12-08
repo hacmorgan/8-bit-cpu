@@ -1,8 +1,9 @@
 \documentclass[12pt]{article}
-\usepackage[left=3cm, right=3cm, top=2.5cm]{geometry} %set margins
+\usepackage[left=3cm, right=3cm, top=2.5cm]{geometry}  % set margins
 \usepackage[document]{ragged2e}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel} 
+\usepackage[english]{babel}
+\usepackage[none]{hyphenat}  % suppress hyphenation
 \usepackage{graphicx}
 \usepackage{amsmath}  % allows use of align and other fancy maths things
 \setcounter{secnumdepth}{4}
@@ -40,7 +41,7 @@ In this configuration, the 555 timer is simply used with two resistors and a cap
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=0.8\linewidth]{../modules/clock/astable_circuit_diagram.png}
-    \caption{Astable 555 Timer Circuit Diagram}
+    \caption{Astable 555 timer circuit diagram}
     \label{fig:astable_circuit_diagram}
   \end{center}
 \end{figure}
@@ -87,7 +88,7 @@ Table \ref{tab:astable_cycle} shows the operation cycle of the circuit. \\
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=0.5\linewidth]{../modules/clock/astable_circuit.png}
-    \caption{Astable 555 Timer Circuit}
+    \caption{Astable 555 timer circuit}
     \label{fig:astable_circuit}
   \end{center}
 \end{figure}
@@ -95,7 +96,7 @@ Table \ref{tab:astable_cycle} shows the operation cycle of the circuit. \\
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=\linewidth]{../modules/clock/astable_scope_no_caps.png}
-    \caption{Astable 555 Timer Oscilloscope Data}
+    \caption{Astable 555 timer oscilloscope data}
     \label{fig:astable_scope}
   \end{center}
 \end{figure}
@@ -111,7 +112,7 @@ Table \ref{tab:astable_cycle} shows the operation cycle of the circuit. \\
       $t_3$ & Discharging & $<3.33$ & 0 & 0 & 0 & 1 & On  \\
       $t_4$ & Charging    & $<1.67$ & 1 & 0 & 1 & 0 & Off \\
     \end{tabular}
-    \caption{Astable 555 Timer Operation Cycle}
+    \caption{Astable 555 timer operation cycle}
     \label{tab:astable_cycle}
   \end{center}
 \end{table}
@@ -129,7 +130,7 @@ The monostable circuit diagram is shown in Figure \ref{fig:monostable_circuit_di
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=0.8\linewidth]{../modules/clock/monostable_circuit_diagram.png}
-    \caption{Monostable 555 Timer Circuit}
+    \caption{Monostable 555 timer circuit}
     \label{fig:monostable_circuit_diagram}
   \end{center}
 \end{figure}
@@ -137,7 +138,7 @@ The monostable circuit diagram is shown in Figure \ref{fig:monostable_circuit_di
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=0.7\linewidth]{../modules/clock/monostable_circuit.png}
-    \caption{Monostable 555 Timer Circuit}
+    \caption{Monostable 555 timer circuit}
     \label{fig:monostable_circuit}
   \end{center}
 \end{figure}
@@ -153,7 +154,7 @@ The monostable circuit diagram is shown in Figure \ref{fig:monostable_circuit_di
       $t_3$ & Button Released & $<3.33$ & 0 & 0 & 1 & 0 & Off  \\
       $t_4$ & Discharge       & $>3.33$ & 0 & 1 & 0 & 1 & On   \\
     \end{tabular}
-    \caption{Monostable 555 Timer Operation Cycle}
+    \caption{Monostable 555 timer operation cycle}
     \label{tab:monostable_cycle}
   \end{center}
 \end{table}
@@ -161,10 +162,12 @@ The monostable circuit diagram is shown in Figure \ref{fig:monostable_circuit_di
 \begin{figure}[hb]
   \begin{center}
     \includegraphics[width=0.9\linewidth]{../modules/clock/monostable_scope.png}
-    \caption{Monostable 555 Timer Circuit}
+    \caption{Monostable 555 timer circuit}
     \label{fig:monostable_scope}
   \end{center}
 \end{figure}
+
+\clearpage
 
 
 \subsection{Bistable 555 Timer}
@@ -172,11 +175,27 @@ We need to be able to switch between our two clocks, which we can use a switch a
 
 \vspace{0.3cm}
 
-To achieve this, we will just utilise the SR latch inside the 555 timer, and a \textit{break-before-make} double throw switch, with the centre pole connected to ground, and the two contacts connected to the 555's \textit{trigger} and \textit{reset} lines respectively. \\
+To achieve this, we will just utilise the SR latch inside the 555 timer, and a \textit{break-before-make} double throw switch, with the centre pole connected to ground, and the two contacts connected to the 555's \textit{trigger} and \textit{reset} lines respectively. The circuit diagram for this circuit is shown in Figure \ref{fig:bistable_circuit_diagram}, and the real circuit is shown in Figure \ref{fig:bistable_circuit}. \\
 
-\vspace{0.3cm}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.8\linewidth]{../modules/clock/bistable_circuit_diagram.png}
+    \caption{Bistable 555 timer circuit diagram}
+    \label{fig:bistable_circuit_diagram}
+  \end{center}
+\end{figure}
 
 If we also tie the threshold line to ground (such that it is never $>3.33V$), the \textit{trigger} line being pulled low will set the latch, while the \textit{reset} line being puled low will reset the latch. Because the switch is a \textit{break-before-make} switch, any bouncing will bounce between floating and that side of the switch, but once the first contact has been made, the output of the latch will be static until the switch first touches the other contact. Thus we have an effective circuit for the switch, where one of the contacts sends the output high, while the other sends it low, with no bouncing. \\
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.6\linewidth]{../modules/clock/bistable_circuit.png}
+    \caption{Bistable 555 timer circuit}
+    \label{fig:bistable_circuit}
+  \end{center}
+\end{figure}
+
+\clearpage
 
 
 \subsection{Clock logic}
@@ -184,13 +203,61 @@ We will use some combinational logic to combine our clock-select switch with the
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=0.9\linewidth]{../modules/clock/monostable_scope.png}
-    \caption{Clock Logic Diagram}
+    \includegraphics[width=0.9\linewidth]{../modules/clock/clock_logic_diagram.png}
+    \caption{Clock logic diagram}
     \label{fig:clock_logic_diagram}
   \end{center}
 \end{figure}
 
 Figure \ref{fig:clock_logic_diagram} shows the logic used in the clock module, and Figure \ref{fig:clock_logic} shows the implementation on the breadboard. This circuit (like any circuit) could be made entirely from NAND gates, saving a chip compared to the real implementation, shown in Figure \ref{fig:clock_logic_nand}. For this project, saving one IC is not really of concern, and the complete NAND implementation is harder to follow, so the simple (conceptually) implementation was chosen.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{../modules/clock/clock_logic_diagram_nand.png}
+    \caption{Clock logic diagram using only NAND gates}
+    \label{fig:clock_logic_diagram}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{../modules/clock/clock_logic.png}
+    \caption{Clock logic}
+    \label{fig:clock_logic_diagram}
+  \end{center}
+\end{figure}
+
+\clearpage
+
+
+
+\section{Registers}
+\subsection{Register Architecture}
+Our computer will have three 8-bit registers. The \textit{A} and \textit{B} registers, for storing arbitrary data; and the \textit{instruction} register, for storing the 4-bit instruction, and (optional) 4-bit argument, usually a memory address. The architecture of a single one of our registers' bits is a D flip-flop, with the input fed back from the output, unless an \textit{enable} line is brought high. Two of these circuits are shown in Figure \ref{fig:register_architecture}, showing the logic flow when the enable line is low and high. \\
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{../modules/register/register_architecture.png}
+    \caption{Register architecture}
+    \label{fig:register_architecture}
+  \end{center}
+\end{figure}
+
+\clearpage
+
+
+\subsection{Register Implementation}
+Building the registers using discrete logic chips would take an inordinate number of breadboards, so in the interest of not wasting time, money, effort, or sanity, we will use two \textit{74LS173} chips (per register), which each contain a prepackaged 4-bit register, using the exact architecture shown above. The circuit for each will be identical, except that the instruction register will only put the four least significant bits on the bus, as there is no situation in which it is necessary for it to put the instruction out on the bus. Figure \ref{fig:register_circuit_diagram} shows the circuit diagram for the \textit{A} register. \\
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{../modules/register/register_circuit_diagram.png}
+    \caption{Register circuit diagram}
+    \label{fig:register_circuit_diagram}
+  \end{center}
+\end{figure}
+
+
 
 
 \end{FlushLeft}
