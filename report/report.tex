@@ -260,7 +260,48 @@ Building the registers using discrete logic chips would take an inordinate numbe
 
 
 \section{ALU}
-The ALU consists of two
+The ALU consists of two \textit{74LS283} 4-bit binary adders, two \textit{74LS86} quad 2-input XOR gates, and a \textit{74LS245} 8-bit bus transceiver (tristate buffer). The XOR gates are used to conditionally invert the value coming in from the \textit{B} register, if the subratct line is brought high. In order for the subtract line to correctly apply two's complement to this value, we must add one after flipping the bits. This is accomplished by tying the subtract line to the carry-in ($C_i$) pin on the adder of the lower nibble. The schematic is shown in Figure \ref{fig:alu_schematic}. \\
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{../modules/ALU/alu_schematic.png}
+    \caption{ALU Schematic}
+    \label{fig:alu_schematic}
+  \end{center}
+\end{figure}
+
+The adding circuit for a single bit is shown in Figure \ref{fig:1_bit_adder}. The design falls out naturally after constructing its truth table, shown in Table \ref{tab:adder_tt}. \\
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.8\linewidth]{../modules/ALU/1_bit_adder.png}
+    \caption{1-bit adding circuit}
+    \label{fig:1_bit_adder}
+  \end{center}
+\end{figure}
+
+\begin{table}[ht]
+  \begin{center}
+    \begin{tabular}{ c c c | c c }
+      $C_i$ & A & B & X & $C_o$
+      \hline
+      0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 1 & 1 & 0 \\
+      0 & 1 & 0 & 1 & 0 \\
+      0 & 1 & 1 & 0 & 1 \\
+      1 & 0 & 0 & 1 & 0 \\
+      1 & 0 & 1 & 0 & 1 \\
+      1 & 1 & 0 & 0 & 1 \\
+      1 & 1 & 1 & 1 & 1 \\
+    \end{tabular}
+    \end{tabular}
+    \caption{1-bit adder truth table}
+    \label{tab:adder_tt}
+  \end{center}
+\end{table}
+
+
+
 
 
 
